@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<title>Sri Manjunatha Silk Udyog</title>
+
+<!-- SOCIAL SHARE -->
+<meta property="og:type" content="website">
+
+<meta property="og:title" content="Sri Manjunatha Silk Udyog">
+
+<meta property="og:description" content="Kanchivaram Silks • Mysore Silk • Banaras Sarees • Fancy Sarees">
+
+<meta property="og:image" content="https://terasynctech.github.io/sri-manjunatha-silk-udyog-blr/logo.png">
+
+<meta property="og:image:secure_url" content="https://terasynctech.github.io/sri-manjunatha-silk-udyog-blr/logo.png">
+
+<meta property="og:image:type" content="image/png">
+
+<meta property="og:image:width" content="1200">
+
+<meta property="og:image:height" content="1200">
+
+<meta property="og:url" content="https://terasynctech.github.io/sri-manjunatha-silk-udyog-blr/">
+
+<meta property="og:site_name" content="Sri Manjunatha Silk Udyog">
+
+<link rel="icon" href="logo.png">
+
+<!-- GOOGLE FONT -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+background:#0f0b08;
+color:white;
+overflow-x:hidden;
+}
+
+/* HERO */
+
+.hero{
+position:relative;
+height:100vh;
+overflow:hidden;
+}
+
+.slide{
+position:absolute;
+width:100%;
+height:100%;
+background-size:cover;
+background-position:center;
+opacity:0;
+animation:slider 16s infinite;
+transform:scale(1.08);
+}
+
+.slide:nth-child(1){
+background:url('https://images.unsplash.com/photo-1610030469983-98e550d6193c?q=80&w=1400') center/cover;
+animation-delay:0s;
+}
+
+.slide:nth-child(2){
+background:url('https://images.unsplash.com/photo-1583391733956-6c78276477e1?q=80&w=1400') center/cover;
+animation-delay:4s;
+}
+
+.slide:nth-child(3){
+background:url('https://images.unsplash.com/photo-1614251055880-ee96e4803393?q=80&w=1400') center/cover;
+animation-delay:8s;
+}
+
+.slide:nth-child(4){
+background:url('https://images.unsplash.com/photo-1621786030484-4c855eed6974?q=80&w=1400') center/cover;
+animation-delay:12s;
+}
+
+@keyframes slider{
+0%{opacity:0;transform:scale(1.08);}
+8%{opacity:1;}
+25%{opacity:1;transform:scale(1);}
+33%{opacity:0;}
+100%{opacity:0;}
+}
+
+.overlay{
+position:absolute;
+width:100%;
+height:100%;
+background:linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.9));
+z-index:1;
+}
+
+.hero-content{
+position:relative;
+z-index:2;
+height:100%;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+}
+
+.logo{
+width:120px;
+height:120px;
+border-radius:50%;
+object-fit:cover;
+border:4px solid rgba(255,255,255,0.3);
+margin-bottom:20px;
+box-shadow:0 0 25px rgba(255,215,0,0.5);
+background:white;
+}
+
+.hero h1{
+font-size:48px;
+font-weight:700;
+line-height:1.2;
+background:linear-gradient(90deg,#ffd700,#ffb700);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+.hero p{
+margin-top:15px;
+font-size:17px;
+max-width:700px;
+color:#f3f3f3;
+}
+
+.badge{
+margin-top:18px;
+padding:10px 22px;
+border-radius:50px;
+background:rgba(255,255,255,0.12);
+border:1px solid rgba(255,255,255,0.15);
+backdrop-filter:blur(12px);
+font-size:14px;
+}
+
+.buttons{
+margin-top:30px;
+display:flex;
+gap:15px;
+flex-wrap:wrap;
+justify-content:center;
+}
+
+.btn{
+padding:14px 28px;
+border-radius:50px;
+text-decoration:none;
+color:white;
+font-weight:600;
+background:linear-gradient(90deg,#c89b3c,#ffcc33);
+color:#111;
+transition:0.4s;
+box-shadow:0 8px 25px rgba(255,204,51,0.3);
+}
+
+.btn:hover{
+transform:translateY(-5px) scale(1.05);
+}
+
+/* SECTION */
+
+.section{
+padding:80px 20px;
+max-width:1200px;
+margin:auto;
+}
+
+.section-title{
+text-align:center;
+font-size:36px;
+margin-bottom:50px;
+color:#ffd700;
+}
+
+/* PRODUCTS */
+
+.products{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.card{
+background:rgba(255,255,255,0.06);
+padding:30px;
+border-radius:25px;
+backdrop-filter:blur(10px);
+border:1px solid rgba(255,255,255,0.08);
+transition:0.4s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+background:rgba(255,255,255,0.08);
+}
+
+.card h3{
+margin-top:15px;
+font-size:24px;
+color:#ffd700;
+}
+
+.card p{
+margin-top:10px;
+line-height:1.7;
+color:#ddd;
+font-size:14px;
+}
+
+/* GALLERY */
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+gap:20px;
+}
+
+.gallery img{
+width:100%;
+height:320px;
+object-fit:cover;
+border-radius:25px;
+transition:0.5s;
+box-shadow:0 10px 25px rgba(0,0,0,0.35);
+}
+
+.gallery img:hover{
+transform:scale(1.05);
+}
+
+/* FOOTER */
+
+.footer{
+padding:60px 20px;
+text-align:center;
+background:#080605;
+border-top:1px solid rgba(255,255,255,0.08);
+}
+
+.footer h2{
+color:#ffd700;
+margin-bottom:12px;
+}
+
+.footer p{
+color:#ccc;
+margin:7px 0;
+}
+
+.socials{
+margin-top:20px;
+display:flex;
+justify-content:center;
+gap:15px;
+flex-wrap:wrap;
+}
+
+.socials a{
+text-decoration:none;
+color:white;
+padding:12px 20px;
+border-radius:50px;
+background:rgba(255,255,255,0.08);
+transition:0.3s;
+}
+
+.socials a:hover{
+background:#ffd700;
+color:#111;
+}
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:32px;
+}
+
+.section-title{
+font-size:28px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="slide"></div>
+<div class="slide"></div>
+<div class="slide"></div>
+<div class="slide"></div>
+
+<div class="overlay"></div>
+
+<div class="hero-content">
+
+<img src="logo.png" class="logo">
+
+<h1>Sri Manjunatha <br> Silk Udyog</h1>
+
+<p>
+Premium Silk Sarees • Fancy Sarees • Dress Materials • Readymade Dresses
+</p>
+
+<div class="badge">
+✨ Traditional Elegance & Modern Fashion
+</div>
+
+<div class="buttons">
+<a href="tel:+919964615002" class="btn">📞 Call Now</a>
+
+<a href="https://wa.me/919964615002" class="btn">
+💬 WhatsApp
+</a>
+
+<a href="#products" class="btn">
+🛍 Explore Collection
+</a>
+</div>
+
+</div>
+
+</section>
+
+<!-- PRODUCTS -->
+
+<section class="section" id="products">
+
+<h2 class="section-title">🛍 Our Collections</h2>
+
+<div class="products">
+
+<div class="card">
+<h3>👑 Kanchivaram Silks</h3>
+<p>
+Premium traditional Kanchivaram silk sarees with elegant craftsmanship and rich designs.
+</p>
+</div>
+
+<div class="card">
+<h3>✨ Mysore Silk</h3>
+<p>
+Classic Mysore silk collections designed for graceful and luxurious occasions.
+</p>
+</div>
+
+<div class="card">
+<h3>🌸 Banaras Sarees</h3>
+<p>
+Beautiful Banarasi sarees with timeless weaving patterns and festive appeal.
+</p>
+</div>
+
+<div class="card">
+<h3>💃 Fancy Sarees</h3>
+<p>
+Stylish fancy sarees suitable for parties, functions, and celebrations.
+</p>
+</div>
+
+<div class="card">
+<h3>🧵 Dress Materials</h3>
+<p>
+Trendy dress materials and fashionable readymade collections for all occasions.
+</p>
+</div>
+
+<div class="card">
+<h3>👗 Girls Tops</h3>
+<p>
+Stylish and modern girls tops with premium quality fabrics and latest trends.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- GALLERY -->
+
+<section class="section">
+
+<h2 class="section-title">📸 Featured Collections</h2>
+
+<div class="gallery">
+
+<img src="https://images.unsplash.com/photo-1583391733956-6c78276477e1?q=80&w=1200">
+
+<img src="https://images.unsplash.com/photo-1614251055880-ee96e4803393?q=80&w=1200">
+
+<img src="https://images.unsplash.com/photo-1621786030484-4c855eed6974?q=80&w=1200">
+
+<img src="https://images.unsplash.com/photo-1610030469983-98e550d6193c?q=80&w=1200">
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer class="footer">
+
+<h2>Sri Manjunatha Silk Udyog</h2>
+
+<p>📍 Old Shop</p>
+
+<p>📞 9964615002 / 9341225266</p>
+
+<p>
+👑 Kanchivaram • Mysore Silk • Banaras Sarees • Fancy Sarees
+</p>
+
+<div class="socials">
+
+<a href="tel:+919964615002">📞 Call</a>
+
+<a href="https://wa.me/919964615002" target="_blank">
+💬 WhatsApp
+</a>
+
+</div>
+
+<p style="margin-top:25px;color:#777;">
+Powered by TeraSyncTech 🚀
+</p>
+
+</footer>
+
+</body>
+</html>
