@@ -1,572 +1,290 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Sri Manjunatha Silk Udyog</title>
 
-<!-- SOCIAL SHARE -->
+<!-- SEO -->
+<meta name="description" content="Sri Manjunatha Silk Udyog - Premium Silk Sarees, Dress Materials & Readymade Dresses">
+
+<!-- SOCIAL PREVIEW -->
 <meta property="og:type" content="website">
 <meta property="og:title" content="Sri Manjunatha Silk Udyog">
-<meta property="og:description" content="Kanchivaram Silks • Mysore Silk • Banaras Sarees • Fancy Sarees">
-<meta property="og:image" content="https://terasynctech.github.io/sri-manjunatha-silk-udyog-blr/logo.png">
-<meta property="og:image:secure_url" content="https://terasynctech.github.io/sri-manjunatha-silk-udyog-blr/logo.png">
-<meta property="og:image:type" content="image/png">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="1200">
-<meta property="og:url" content="https://terasynctech.github.io/sri-manjunatha-silk-udyog-blr/">
-<meta property="og:site_name" content="Sri Manjunatha Silk Udyog">
+<meta property="og:description" content="Kanchivaram Silks | Mysore Silk | Banaras Sarees | Fancy Sarees">
+
+<meta property="og:image" content="logo.png">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Sri Manjunatha Silk Udyog">
+<meta name="twitter:description" content="Premium Saree Collection & Silk Udyog">
+<meta name="twitter:image" content="logo.png">
 
 <link rel="icon" href="logo.png">
 
-<!-- GOOGLE FONT -->
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-
-<!-- FONT AWESOME -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
-
 <style>
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-scroll-behavior:smooth;
-}
-
+/* ===== BODY ===== */
 body{
-font-family:'Poppins',sans-serif;
-background:#0f0b08;
-color:white;
-overflow-x:hidden;
+    margin:0;
+    padding:0;
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+    background:linear-gradient(135deg,#000,#111,#1a1a1a);
+    color:#fff;
+    overflow-x:hidden;
 }
 
-/* HERO */
-
-.hero{
-position:relative;
-height:100vh;
-overflow:hidden;
+/* ===== ANIMATED GLOW ===== */
+body::before{
+    content:"";
+    position:fixed;
+    width:450px;
+    height:450px;
+    background:radial-gradient(circle,rgba(255,215,0,0.25),transparent);
+    top:-120px;
+    left:-120px;
+    z-index:-1;
+    animation:moveGlow 7s infinite alternate ease-in-out;
 }
 
-.slide{
-position:absolute;
-width:100%;
-height:100%;
-background-size:cover;
-background-position:center;
-opacity:0;
-animation:slider 20s infinite;
-transform:scale(1.08);
+@keyframes moveGlow{
+    0%{transform:translate(0,0);}
+    100%{transform:translate(180px,150px);}
 }
 
-.slide:nth-child(1){
-background:url('https://images.unsplash.com/photo-1610030469983-98e550d6193c?q=80&w=1600') center/cover;
-animation-delay:0s;
+/* ===== CONTAINER ===== */
+.container{
+    max-width:430px;
+    margin:auto;
+    padding:20px;
 }
 
-.slide:nth-child(2){
-background:url('https://images.unsplash.com/photo-1583391733956-6c78276477e1?q=80&w=1600') center/cover;
-animation-delay:5s;
+/* ===== CARD ===== */
+.card{
+    background:rgba(255,255,255,0.06);
+    border-radius:28px;
+    padding:28px 22px;
+    backdrop-filter:blur(18px);
+    box-shadow:0 0 35px rgba(255,215,0,0.18);
+    text-align:center;
+    animation:fadeIn 1s ease;
 }
 
-.slide:nth-child(3){
-background:url('https://images.unsplash.com/photo-1614251055880-ee96e4803393?q=80&w=1600') center/cover;
-animation-delay:10s;
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
 }
 
-.slide:nth-child(4){
-background:url('https://images.unsplash.com/photo-1621786030484-4c855eed6974?q=80&w=1600') center/cover;
-animation-delay:15s;
-}
-
-@keyframes slider{
-0%{opacity:0;transform:scale(1.08);}
-8%{opacity:1;}
-25%{opacity:1;transform:scale(1);}
-33%{opacity:0;}
-100%{opacity:0;}
-}
-
-.overlay{
-position:absolute;
-width:100%;
-height:100%;
-background:linear-gradient(to bottom, rgba(0,0,0,0.25), rgba(0,0,0,0.92));
-z-index:1;
-}
-
-.hero-content{
-position:relative;
-z-index:2;
-height:100%;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-text-align:center;
-padding:20px;
-animation:fadeUp 1.5s ease;
-}
-
-@keyframes fadeUp{
-from{
-opacity:0;
-transform:translateY(40px);
-}
-to{
-opacity:1;
-transform:translateY(0);
-}
-}
-
+/* ===== LOGO ===== */
 .logo{
-width:135px;
-height:135px;
-border-radius:50%;
-object-fit:cover;
-border:5px solid rgba(255,255,255,0.3);
-margin-bottom:25px;
-box-shadow:
-0 0 20px rgba(255,215,0,0.4),
-0 0 50px rgba(255,215,0,0.2);
-background:white;
-animation:float 3s ease-in-out infinite;
+    width:120px;
+    height:120px;
+    object-fit:cover;
+    border-radius:50%;
+    border:3px solid #FFD700;
+    margin-bottom:15px;
+    animation:float 3s infinite ease-in-out;
+    background:#fff;
 }
 
 @keyframes float{
-0%{transform:translateY(0);}
-50%{transform:translateY(-10px);}
-100%{transform:translateY(0);}
+    0%{transform:translateY(0);}
+    50%{transform:translateY(-8px);}
+    100%{transform:translateY(0);}
 }
 
-.hero h1{
-font-size:58px;
-font-weight:800;
-line-height:1.15;
-background:linear-gradient(90deg,#ffd700,#ffcc33,#fff2b0);
--webkit-background-clip:text;
--webkit-text-fill-color:transparent;
-text-shadow:0 0 20px rgba(255,215,0,0.2);
+/* ===== TITLE ===== */
+h1{
+    margin:0;
+    font-size:26px;
+    color:#FFD700;
+    line-height:1.3;
 }
 
-.hero p{
-margin-top:18px;
-font-size:18px;
-max-width:760px;
-color:#f5f5f5;
-line-height:1.8;
+/* ===== SUBTITLE ===== */
+.subtitle{
+    color:#ccc;
+    margin-top:8px;
+    font-size:15px;
 }
 
+/* ===== BADGE ===== */
 .badge{
-margin-top:20px;
-padding:12px 24px;
-border-radius:50px;
-background:rgba(255,255,255,0.12);
-border:1px solid rgba(255,255,255,0.15);
-backdrop-filter:blur(14px);
-font-size:14px;
-letter-spacing:1px;
-box-shadow:0 0 20px rgba(255,255,255,0.08);
+    margin-top:15px;
+    display:inline-block;
+    padding:8px 16px;
+    border:1px solid #FFD700;
+    border-radius:30px;
+    color:#FFD700;
+    font-size:13px;
+    font-weight:600;
+    animation:pulse 2s infinite;
 }
 
-/* BUTTONS */
-
-.buttons{
-margin-top:40px;
-display:flex;
-gap:20px;
-flex-wrap:wrap;
-justify-content:center;
+@keyframes pulse{
+    0%{box-shadow:0 0 5px #FFD700;}
+    50%{box-shadow:0 0 20px #FFD700;}
+    100%{box-shadow:0 0 5px #FFD700;}
 }
 
+/* ===== BUTTON ===== */
 .btn{
-position:relative;
-padding:16px 34px;
-border-radius:60px;
-text-decoration:none;
-font-weight:700;
-font-size:15px;
-overflow:hidden;
-transition:0.4s;
-display:flex;
-align-items:center;
-gap:10px;
-letter-spacing:0.5px;
+    display:block;
+    width:90%;
+    margin:12px auto;
+    padding:14px;
+    border-radius:35px;
+    text-decoration:none;
+    font-weight:700;
+    color:#000;
+    background:linear-gradient(90deg,#FFD700,#d4af37);
+    transition:0.3s;
+    box-shadow:0 4px 15px rgba(255,215,0,0.3);
 }
 
-.btn-primary{
-background:linear-gradient(90deg,#ffd700,#ffcc33);
-color:#111;
-box-shadow:0 10px 30px rgba(255,204,51,0.4);
+.btn:hover{
+    transform:scale(1.04);
 }
 
-.btn-primary:hover{
-transform:translateY(-6px) scale(1.05);
-box-shadow:0 15px 35px rgba(255,204,51,0.6);
-}
-
-.btn-whatsapp{
-background:linear-gradient(90deg,#00b894,#00e676);
-color:white;
-box-shadow:0 10px 30px rgba(0,230,118,0.35);
-}
-
-.btn-whatsapp:hover{
-transform:translateY(-6px) scale(1.05);
-box-shadow:0 15px 35px rgba(0,230,118,0.5);
-}
-
-.btn-location{
-background:rgba(255,255,255,0.12);
-border:1px solid rgba(255,255,255,0.18);
-color:white;
-backdrop-filter:blur(10px);
-}
-
-.btn-location:hover{
-background:#ffd700;
-color:#111;
-transform:translateY(-6px);
-}
-
-/* SECTION */
-
-.section{
-padding:90px 20px;
-max-width:1250px;
-margin:auto;
-}
-
-.section-title{
-text-align:center;
-font-size:42px;
-margin-bottom:55px;
-color:#ffd700;
-font-weight:800;
-}
-
-/* PRODUCTS */
-
+/* ===== PRODUCTS ===== */
 .products{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:28px;
+    margin-top:25px;
+    text-align:left;
 }
 
-.card{
-background:rgba(255,255,255,0.06);
-padding:35px 30px;
-border-radius:28px;
-backdrop-filter:blur(14px);
-border:1px solid rgba(255,255,255,0.08);
-transition:0.5s;
-position:relative;
-overflow:hidden;
+.products h3{
+    text-align:center;
+    color:#FFD700;
+    margin-bottom:15px;
 }
 
-.card::before{
-content:'';
-position:absolute;
-width:140px;
-height:140px;
-background:rgba(255,215,0,0.08);
-border-radius:50%;
-top:-40px;
-right:-40px;
+.products ul{
+    padding-left:20px;
 }
 
-.card:hover{
-transform:translateY(-12px);
-background:rgba(255,255,255,0.09);
-box-shadow:0 15px 35px rgba(0,0,0,0.35);
+.products li{
+    margin:10px 0;
+    color:#ddd;
+    line-height:1.5;
+    font-size:15px;
 }
 
-.card h3{
-margin-top:15px;
-font-size:24px;
-color:#ffd700;
+/* ===== CONTACT ===== */
+.contact-box{
+    margin-top:20px;
+    background:rgba(255,255,255,0.05);
+    padding:15px;
+    border-radius:18px;
+    border:1px solid rgba(255,215,0,0.2);
 }
 
-.card p{
-margin-top:12px;
-line-height:1.8;
-color:#ddd;
-font-size:14px;
+.contact-box p{
+    margin:8px 0;
+    color:#ddd;
+    font-size:14px;
 }
 
-/* GALLERY */
-
-.gallery{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:22px;
-}
-
-.gallery img{
-width:100%;
-height:340px;
-object-fit:cover;
-border-radius:28px;
-transition:0.5s;
-box-shadow:0 12px 30px rgba(0,0,0,0.35);
-}
-
-.gallery img:hover{
-transform:scale(1.05);
-}
-
-/* FOOTER */
-
+/* ===== FOOTER ===== */
 .footer{
-padding:70px 20px;
-text-align:center;
-background:#080605;
-border-top:1px solid rgba(255,255,255,0.08);
-}
-
-.footer h2{
-color:#ffd700;
-margin-bottom:15px;
-font-size:34px;
-}
-
-.footer p{
-color:#ccc;
-margin:10px 0;
-font-size:15px;
-}
-
-.socials{
-margin-top:30px;
-display:flex;
-justify-content:center;
-gap:18px;
-flex-wrap:wrap;
-}
-
-.socials a{
-text-decoration:none;
-color:white;
-padding:14px 24px;
-border-radius:60px;
-background:rgba(255,255,255,0.08);
-transition:0.4s;
-font-weight:600;
-display:flex;
-align-items:center;
-gap:10px;
-}
-
-.socials a:hover{
-background:#ffd700;
-color:#111;
-transform:translateY(-5px);
-}
-
-/* MOBILE */
-
-@media(max-width:768px){
-
-.hero h1{
-font-size:36px;
-}
-
-.hero p{
-font-size:15px;
-}
-
-.section-title{
-font-size:30px;
-}
-
-.logo{
-width:110px;
-height:110px;
-}
-
-.buttons{
-gap:15px;
-}
-
-.btn{
-width:100%;
-justify-content:center;
-}
-
+    margin-top:25px;
+    font-size:12px;
+    color:#888;
 }
 
 </style>
+
 </head>
 
 <body>
 
-<!-- HERO -->
+<div class="container">
 
-<section class="hero">
+<div class="card">
 
-<div class="slide"></div>
-<div class="slide"></div>
-<div class="slide"></div>
-<div class="slide"></div>
+<!-- LOGO -->
+<img src="logo.png" alt="Sri Manjunatha Silk Udyog" class="logo">
 
-<div class="overlay"></div>
+<!-- COMPANY NAME -->
+<h1>Sri Manjunatha Silk Udyog</h1>
 
-<div class="hero-content">
-
-<img src="logo.png" class="logo">
-
-<h1>Sri Manjunatha <br> Silk Udyog</h1>
-
-<p>
-Premium Silk Sarees • Fancy Sarees • Dress Materials • Readymade Dresses with timeless elegance and luxury collections.
-</p>
+<div class="subtitle">
+Premium Silk Sarees & Dress Collections
+</div>
 
 <div class="badge">
-✨ Traditional Elegance • Modern Fashion • Premium Collections
+✨ Trusted Saree Store
 </div>
 
-<div class="buttons">
-
-<a href="tel:+919964615002" class="btn btn-primary">
-<i class="fa-solid fa-phone"></i>
-Call Now
+<!-- BUTTONS -->
+<a class="btn" href="tel:+919964615002">
+📞 Call : 9964615002
 </a>
 
-<a href="https://wa.me/919964615002" class="btn btn-whatsapp">
-<i class="fa-brands fa-whatsapp"></i>
-WhatsApp
+<a class="btn" href="tel:+919341225266">
+📞 Call : 9341225266
 </a>
 
-<a href="https://maps.app.goo.gl/aL46xkihoLvdvMqMA" target="_blank" class="btn btn-location">
-<i class="fa-solid fa-location-dot"></i>
-Store Location
+<a class="btn"
+href="https://wa.me/919964615002?text=Hi%20I%20am%20interested%20in%20your%20products">
+💬 WhatsApp
 </a>
+
+<a class="btn"
+href="https://maps.app.goo.gl/ey7v4GjwQ7z5xL81A"
+target="_blank">
+📍 View Location
+</a>
+
+<a class="btn" href="contact.vcf" download>
+📥 Save Contact
+</a>
+
+<!-- CONTACT -->
+<div class="contact-box">
+
+<p><strong>📍 Location :</strong> Old Shop</p>
+
+<p><strong>📞 Mobile :</strong> 9964615002 / 9341225266</p>
 
 </div>
-
-</div>
-
-</section>
 
 <!-- PRODUCTS -->
-
-<section class="section" id="products">
-
-<h2 class="section-title">🛍 Our Premium Collections</h2>
-
 <div class="products">
 
-<div class="card">
-<h3>👑 Kanchivaram Silks</h3>
-<p>
-Premium traditional Kanchivaram silk sarees with elegant craftsmanship and rich royal designs.
-</p>
-</div>
+<h3>🛍️ Our Products</h3>
 
-<div class="card">
-<h3>✨ Mysore Silk</h3>
-<p>
-Classic Mysore silk collections designed for graceful and luxurious occasions.
-</p>
-</div>
+<ul>
+<li>👑 Kanchivaram Silks</li>
 
-<div class="card">
-<h3>🌸 Banaras Sarees</h3>
-<p>
-Beautiful Banarasi sarees with timeless weaving patterns and festive appeal.
-</p>
-</div>
+<li>✨ Mysore Silk</li>
 
-<div class="card">
-<h3>💃 Fancy Sarees</h3>
-<p>
-Stylish fancy sarees suitable for parties, functions, weddings, and celebrations.
-</p>
-</div>
+<li>💖 Banaras Sarees</li>
 
-<div class="card">
-<h3>🧵 Dress Materials</h3>
-<p>
-Trendy dress materials and fashionable readymade collections for all occasions.
-</p>
-</div>
+<li>🌸 Fancy Sarees</li>
 
-<div class="card">
-<h3>👗 Girls Tops</h3>
-<p>
-Stylish and modern girls tops with premium quality fabrics and latest fashion trends.
-</p>
-</div>
+<li>🧵 Dress Materials & Readymade Dresses</li>
+
+<li>👗 Top's (Girls)</li>
+
+</ul>
 
 </div>
-
-</section>
-
-<!-- GALLERY -->
-
-<section class="section">
-
-<h2 class="section-title">📸 Featured Collections</h2>
-
-<div class="gallery">
-
-<img src="https://images.unsplash.com/photo-1583391733956-6c78276477e1?q=80&w=1200">
-
-<img src="https://images.unsplash.com/photo-1614251055880-ee96e4803393?q=80&w=1200">
-
-<img src="https://images.unsplash.com/photo-1621786030484-4c855eed6974?q=80&w=1200">
-
-<img src="https://images.unsplash.com/photo-1610030469983-98e550d6193c?q=80&w=1200">
-
-</div>
-
-</section>
 
 <!-- FOOTER -->
-
-<footer class="footer">
-
-<h2>Sri Manjunatha Silk Udyog</h2>
-
-<p>
-📍 
-<a href="https://maps.app.goo.gl/aL46xkihoLvdvMqMA" target="_blank" style="color:#ffd700;text-decoration:none;">
-View Store Location
-</a>
-</p>
-
-<p>📞 9964615002 / 9341225266</p>
-
-<p>
-👑 Kanchivaram • Mysore Silk • Banaras Sarees • Fancy Sarees
-</p>
-
-<div class="socials">
-
-<a href="tel:+919964615002">
-<i class="fa-solid fa-phone"></i>
-Call
-</a>
-
-<a href="https://wa.me/919964615002" target="_blank">
-<i class="fa-brands fa-whatsapp"></i>
-WhatsApp
-</a>
-
-<a href="https://maps.app.goo.gl/aL46xkihoLvdvMqMA" target="_blank">
-<i class="fa-solid fa-location-dot"></i>
-Location
-</a>
+<div class="footer">
+Powered by TeraCard 🚀
+</div>
 
 </div>
 
-<p style="margin-top:30px;color:#777;">
-Powered by TeraSyncTech 🚀
-</p>
-
-</footer>
+</div>
 
 </body>
 </html>
